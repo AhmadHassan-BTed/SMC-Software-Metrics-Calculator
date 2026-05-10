@@ -149,7 +149,7 @@ The application processes data through three distinct pipelines:
 
 ## 🤝 Development & Contributing
 
-We welcome contributions from the community! Please follow these steps:
+Contributions are welcome! Please follow these steps:
 
 1. **Fork** the repository.
 2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`).
@@ -166,5 +166,5 @@ Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <div align="center">
-    <p>Built with ❤️ by the Software Metrics Team</p>
+    <p>Built with ❤️ by Ahmad Hassan (B-Ted)</p>
 </div>
