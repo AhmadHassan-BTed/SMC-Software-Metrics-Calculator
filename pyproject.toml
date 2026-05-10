@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "software-metrics-calculator"
+version = "1.0.0"
+authors = [
+  { name="Ahmad Hassan", email="ahmadhassan@example.com" },
+]
+description = "A professional dashboard for analyzing software metrics and project health."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "streamlit>=1.30.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "numpy>=1.24.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/AhmadHassan-BTed/Software-Metrics-Calculator"
+"Bug Tracker" = "https://github.com/AhmadHassan-BTed/Software-Metrics-Calculator/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
