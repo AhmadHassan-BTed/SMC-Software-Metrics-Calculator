@@ -14,12 +14,8 @@ from software_metrics.calculators.estimation import calculate_cocomo
 from software_metrics.calculators.agile import analyze_agile_metrics
 
 def run_app():
-    st.set_page_config(
-        page_title="Software Metrics Calculator",
-        page_icon="📊",
-        layout="wide"
-    )
     
+
     st.title("🚀 Advanced Software Metrics Analysis Dashboard")
     st.markdown("---")
 
