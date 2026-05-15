@@ -29,4 +29,4 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["software_metrics*"]
+include = ["software_metrics*", "java_analyzer*"]

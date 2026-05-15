@@ -5,7 +5,7 @@ from pathlib import Path
 # Add paths to sys.path to resolve internal modules
 ROOT_DIR = Path(__file__).parent
 sys.path.append(str(ROOT_DIR / "src"))
-sys.path.append(str(ROOT_DIR / "java_analyzer"))
+sys.path.append(str(ROOT_DIR / "src" / "java_analyzer"))
 
 # Global Page Configuration
 st.set_page_config(
@@ -27,7 +27,7 @@ with st.sidebar:
 
 # Import the main functions here to avoid executing module-level code before page config
 from software_metrics.ui.dashboard import run_app as run_python_dashboard
-from dashboard import main as run_java_dashboard
+from java_analyzer.dashboard import main as run_java_dashboard
 
 if __name__ == "__main__":
     if app_mode == "Python & Agile Metrics":
