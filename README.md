@@ -13,6 +13,9 @@
 
 </div>
 
+> [!NOTE]
+> This project was previously known as **SMC-Software-Metrics-Calculator**.
+
 ---
 
 ## 📖 The Philosophy
