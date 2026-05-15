@@ -68,10 +68,10 @@ def render_unified_landing():
     
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.markdown("#### ☕ Enterprise Java Analysis")
+        st.markdown("#### ☕ Architecture & Static Analysis")
         st.markdown("- Deep AST Code Smell Detection\n- Design & Implementation Flaws\n- Maintainability Index")
     with col2:
-        st.markdown("#### 🐍 Python Metrics")
+        st.markdown("#### 📊 Code Metrics")
         st.markdown("- Cyclomatic & Cognitive Complexity\n- Defect Density Prediction\n- COCOMO Estimation")
     with col3:
         st.markdown("#### 🏃 Agile Process")
@@ -80,7 +80,7 @@ def render_unified_landing():
     st.markdown("---")
     st.markdown("### 🔍 How to Use")
     st.markdown("""
-    1. **Upload Files:** Use the Control Center sidebar to upload any combination of Python files, Java files, or Agile JSON data into the single Source Code uploader.
+    1. **Upload Files:** Use the Control Center sidebar to upload any combination of source code files or Agile JSON data into the single Source Code uploader.
     2. **Configure Engines:** Adjust thresholds and toggle specific analyzers (like Design Smells) to tailor the strictness.
     3. **Execute:** Click the "Execute Omniscient Analysis" button to process all uploaded artifacts simultaneously.
     4. **Review Results:** Navigate through the dynamically generated tabs to explore unified insights seamlessly.
@@ -159,7 +159,7 @@ def main():
         
         st.markdown("### Source Code (Auto-Detect)")
         # UNIFIED SINGLE UPLOADER FOR BOTH PYTHON AND JAVA
-        source_files = st.file_uploader("Upload Code Files (.py, .java)", type=['py', 'java'], accept_multiple_files=True)
+        source_files = st.file_uploader("Upload Source Code", type=['py', 'java'], accept_multiple_files=True)
         
         st.markdown("### Process Data")
         sprint_data = st.file_uploader("Upload Sprint Data (JSON)", type=['json'])
@@ -205,8 +205,8 @@ def main():
         st.markdown('<h1 class="main-header">📊 Unified Analysis Results</h1>', unsafe_allow_html=True)
         
         tab_names = []
-        if python_files: tab_names.append("🐍 Python Metrics")
-        if java_files: tab_names.append("☕ Java Static Analysis")
+        if python_files: tab_names.append("📊 Code Metrics")
+        if java_files: tab_names.append("☕ Architecture & Smells")
         if sprint_data: tab_names.append("🏃 Agile Analytics")
         
         if not tab_names:
@@ -220,7 +220,7 @@ def main():
                 if st.session_state.get('omni_analyzed', False):
                     render_python_results(python_files, show_recommendations, complexity_threshold)
                 else:
-                    st.info("Click 'Execute Omniscient Analysis' in the sidebar to process the Python files.")
+                    st.info("Click 'Execute Omniscient Analysis' in the sidebar to process code metrics.")
             tab_idx += 1
             
         if java_files:
@@ -229,7 +229,7 @@ def main():
                     # Process each Java file. If multiple, we show a selectbox to pick which one to view.
                     if len(java_files) > 1:
                         java_file_names = [f.name for f in java_files]
-                        selected_java = st.selectbox("Select Java File to view analysis:", java_file_names)
+                        selected_java = st.selectbox("Select Source File to view static analysis:", java_file_names)
                         active_java_file = next(f for f in java_files if f.name == selected_java)
                     else:
                         active_java_file = java_files[0]
@@ -250,7 +250,7 @@ def main():
                     if st.session_state.analysis_results is not None:
                         display_java_results()
                 else:
-                    st.info("Click 'Execute Omniscient Analysis' in the sidebar to run the Java AST Engine.")
+                    st.info("Click 'Execute Omniscient Analysis' in the sidebar to run the AST Engine.")
             tab_idx += 1
             
         if sprint_data:
