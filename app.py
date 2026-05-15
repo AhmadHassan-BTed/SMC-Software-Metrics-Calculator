@@ -12,7 +12,7 @@ sys.path.append(str(ROOT_DIR / "src" / "java_analyzer"))
 
 # Global Page Configuration
 st.set_page_config(
-    page_title="Omniscient Quality Suite",
+    page_title="CoDiver: Code Sniffer & Project Analyzer",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -61,7 +61,7 @@ from software_metrics.ui.components.charts import (
 initialize_session_state()
 
 def render_unified_landing():
-    st.markdown('<h1 class="main-header">🛡️ Omniscient Software Intelligence Suite</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🛡️ CoDiver: Code Sniffer & Project Analyzer</h1>', unsafe_allow_html=True)
     st.markdown('<p class="subtitle">Unified Code Quality, Architecture Metrics & Agile Process Analytics<br><i>An Open Source Project by Ahmad Hassan (B-Ted)</i></p>', unsafe_allow_html=True)
     
     st.markdown("### 🎯 Unified Capabilities")
@@ -82,7 +82,7 @@ def render_unified_landing():
     st.markdown("""
     1. **Upload Files:** Use the Control Center sidebar to upload any combination of source code files or Agile JSON data into the single Source Code uploader.
     2. **Configure Engines:** Adjust thresholds and toggle specific analyzers (like Design Smells) to tailor the strictness.
-    3. **Execute:** Click the "Execute Omniscient Analysis" button to process all uploaded artifacts simultaneously.
+    3. **Execute:** Click the "Execute CoDiver Analysis" button to process all uploaded artifacts simultaneously.
     4. **Review Results:** Navigate through the dynamically generated tabs to explore unified insights seamlessly.
     """)
     st.info("👆 Awaiting data... Upload files from the Control Center to begin.")
@@ -184,7 +184,7 @@ def main():
             }
             
         st.markdown("---")
-        analyze_btn = st.button("🚀 Execute Omniscient Analysis", type="primary", use_container_width=True)
+        analyze_btn = st.button("🚀 Execute CoDiver Analysis", type="primary", use_container_width=True)
         
         st.caption("🔧 Unified Platform v4.1")
         st.caption(f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -226,7 +226,7 @@ def main():
                 if st.session_state.get('omni_analyzed', False):
                     render_python_results(python_files, show_recommendations, complexity_threshold)
                 else:
-                    st.info("Click 'Execute Omniscient Analysis' in the sidebar to process code metrics.")
+                    st.info("Click 'Execute CoDiver Analysis' in the sidebar to process code metrics.")
             tab_idx += 1
             
         if java_files:
@@ -256,7 +256,7 @@ def main():
                     if st.session_state.analysis_results is not None:
                         display_java_results()
                 else:
-                    st.info("Click 'Execute Omniscient Analysis' in the sidebar to run the AST Engine.")
+                    st.info("Click 'Execute CoDiver Analysis' in the sidebar to run the AST Engine.")
             tab_idx += 1
             
         if sprint_data:
@@ -264,7 +264,7 @@ def main():
                 if st.session_state.get('omni_analyzed', False):
                     render_agile_results(sprint_data)
                 else:
-                    st.info("Click 'Execute Omniscient Analysis' in the sidebar to process Agile Data.")
+                    st.info("Click 'Execute CoDiver Analysis' in the sidebar to process Agile Data.")
             tab_idx += 1
 
 if __name__ == "__main__":

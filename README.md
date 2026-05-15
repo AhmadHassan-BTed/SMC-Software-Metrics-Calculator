@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ Omniscient Software Intelligence Suite
+# 🛡️ CoDiver: Code Sniffer & Project Analyzer
 
 *An advanced, open-source unified platform for code quality, architecture metrics, and Agile analytics.*
 
@@ -16,7 +16,7 @@
 
 ## 📖 The Philosophy
 
-Software is inherently human. Behind every line of code, every architectural decision, and every sprint metric lies human effort and engineering intent. The **Omniscient Software Intelligence Suite** was built on the premise that technical debt shouldn't be an abstract concept—it should be deeply visible, understandable, and actionable.
+Software is inherently human. Behind every line of code, every architectural decision, and every sprint metric lies human effort and engineering intent. The **CoDiver: Code Sniffer & Project Analyzer** was built on the premise that technical debt shouldn't be an abstract concept—it should be deeply visible, understandable, and actionable.
 
 This platform bridges the gap between raw codebase complexity and human understanding. By unifying Python parsing, Java static analysis, and Agile process tracking into a single frictionless dashboard, the suite abstracts away the borders between languages and focuses purely on **the code**.
 
@@ -67,7 +67,7 @@ sequenceDiagram
     User->>UI: Uploads Source Code (.py, .java)
     UI->>UI: Auto-categorize by extension
     User->>UI: Adjusts Global Parameters
-    User->>UI: Executes Omniscient Analysis
+    User->>UI: Executes CoDiver Analysis
     
     UI->>Engine: Dispatches raw UTF-8 strings & configs
     
@@ -95,7 +95,7 @@ The repository enforces a strict separation between UI logic and calculation alg
 <summary><b>📂 Click to expand the Project Tree</b></summary>
 
 ```text
-Omniscient-Quality-Suite/
+CoDiver/
 ├── app.py                      # Master Unified Controller & UI Entry Point
 ├── requirements.txt            # Dependency configuration
 └── src/
@@ -142,8 +142,8 @@ To initialize the suite in a local development environment:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/Omniscient-Quality-Suite.git
-cd Omniscient-Quality-Suite
+git clone https://github.com/yourusername/CoDiver.git
+cd CoDiver
 
 # 2. Install AST parsers and UI dependencies
 pip install -r requirements.txt
